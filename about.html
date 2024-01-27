@@ -4,85 +4,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Us</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
 </head>
 
-<body>
+<body class="container"> <!--Bootstrap container added so page is moved in from sides.-->
+    <!--NavBar with dropdown. When small it turns into a hamburger menu.-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            About
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
-                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
-                           <!-- <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
-                        </ul>
-                    </li>
-            </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown active"> <!--Makes active page bolder. -->
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Info
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="about.html">About Us <span class="sr-only">(current)</span></a>
+                        <a class="dropdown-item" href="ourservices.html">Our Services</a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </nav>
 
-
-    
-    <header>
-        <h1>About Us</h1>
+    <header> <!--Header centered with bottom margin and green. -->
+        <div class="text-center mb-4 text-success">
+            <h1>About Us</h1>
+        </div>
     </header>
-    <section>
-        <h2>Story</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut luctus felis, a venenatis tellus. Aliquam et
-            nunc viverra, pharetra enim vitae, consectetur mauris. Morbi bibendum nulla eget ligula porta, in rutrum
-            dolor aliquet. Aenean ultrices dui lacus, at finibus quam efficitur non. Nulla scelerisque pretium placerat.
-            Ut arcu nisi, malesuada rutrum lectus eu, lacinia feugiat velit. Phasellus id vehicula arcu, eget rutrum
-            sapien. Phasellus laoreet mauris nisi, sollicitudin pulvinar justo feugiat eget. Nam laoreet nisi sed justo
-            tincidunt, sed ullamcorper ipsum porttitor. Fusce in condimentum erat, ut condimentum quam. Praesent
-            dignissim ex a felis fringilla accumsan. Etiam gravida laoreet urna, quis consectetur nunc eleifend sit
-            amet.</p>
+
+    <section> <!--Bootstrap Alert type to bring attention to this section. -->
+        <div class="alert alert-info" role="alert">
+            <h2>Story</h2>
+        </div>
+        <div>
+            <p class="lead bg-dark text-white my-4">
+                <!--Making Paragraph Text stand out. adding dark background and white text.-->
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut luctus
+                felis, a venenatis tellus. Aliquam et
+                nunc viverra, pharetra enim vitae, consectetur mauris. Morbi bibendum nulla eget ligula porta, in rutrum
+                dolor aliquet. Aenean ultrices dui lacus, at finibus quam efficitur non. Nulla scelerisque pretium
+                placerat.
+                Ut arcu nisi, malesuada rutrum lectus eu, lacinia feugiat velit. Phasellus id vehicula arcu, eget rutrum
+                sapien. Phasellus laoreet mauris nisi, sollicitudin pulvinar justo feugiat eget. Nam laoreet nisi sed
+                justo
+                tincidunt, sed ullamcorper ipsum porttitor. Fusce in condimentum erat, ut condimentum quam. Praesent
+                dignissim ex a felis fringilla accumsan. Etiam gravida laoreet urna, quis consectetur nunc eleifend sit
+                amet.</p>
+        </div>
     </section>
 
     <section>
-        <h2>Our people</h2>
-        <table>
-            <table id="contacts">
-                <tr>
-                    <!--Table Header 3 columns Name, email, phone.-->
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                </tr>
-                <tr> <!--Table Row-->
-                    <!--Data for Row 1-->
-                    <td>Jimmy Johns</td>
-                    <td>jj@dogtraining.com</td>
-                    <td>999-888-7777</td>
-                </tr>
-                <tr>
-                    <td>Mark Minor</td>
-                    <td>mm@dogtraining.com</td>
-                    <td>999-888-6666</td>
-                </tr>
-                <tr>
-                    <td>Timmy Taco</td>
-                    <td>tt@dogtraining.com,</td>
-                    <td>999-888-5555</td>
-                </tr>
+        <div class="text-center my-4 text-success">
+            <h2>Our people</h2>
+        </div>
+        <!--.-->
+        <table class="container my-2"> <!--Table with Dark header theme, striped with hover and a border.-->
+            <table class="table table-striped table-hover table-bordered">
+                <thead class="thead-dark">
+                    <tr>
+                        <!--Table Header 3 columns Name, email, phone.-->
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> <!--Table Row-->
+                        <!--Data for Row 1-->
+                        <td>Jimmy Johns</td>
+                        <td>jj@dogtraining.com</td>
+                        <td>999-888-7777</td>
+                    </tr>
+                    <tr>
+                        <td>Mark Minor</td>
+                        <td>mm@dogtraining.com</td>
+                        <td>999-888-6666</td>
+                    </tr>
+                    <tr>
+                        <td>Timmy Taco</td>
+                        <td>tt@dogtraining.com</td>
+                        <td>999-888-5555</td>
+                    </tr>
+                </tbody>
             </table>
     </section>
+
+
+
+    <!--Footer with top and bottom margin of 5. -->
+    <div>
+        <footer class="text-center my-4">
+            JennyMarshall
+        </footer>
+    </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--This is needed for the nav dropdown to work.-->
 </body>
 
 </html>

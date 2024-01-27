@@ -4,78 +4,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 
 </head>
 
-<body class="bg-light bg-gradient">
-    <!--At least 2 pages.
-A Bootstrap navbar, table, and form.
-Bootstrap grid used throughout to format elements
-Elements should stack vertically when the window is small-->
+<body class="bg-secondary container"> <!--Bootstrap container added so page is moved in from sides.-->
+    <!--NavBar with dropdown. When small it turns into a hamburger menu.-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            About
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
-                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
-                           <!-- <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>-->
-                        </ul>
-                    </li>
-            </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item active"> <!--Makes active page bolder. -->
+                    <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Info
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="about.html">About Us</a>
+                        <a class="dropdown-item" href="ourservices.html">Our Services</a>
+                    </div>
+                </li>
+            </ul>
         </div>
     </nav>
 
-    <div class="" role="">
-        This is my homepage with a Navbar. 2 Header styles, an image, a list and a footer.
+
+    <section> <!--Header centered with bottom margin and green. -->
+        <div class="text-center mb-4 text-success">
+            <h1>Adopt a Pet</h1>
+        </div>
+    </section>
+
+    <section> <!--Bootstrap Alert type to bring attention to this section. -->
+        <div class="alert alert-info" role="alert">
+            <h2>Why you should adopt a pet.</h2>
+        </div>
+
+        <div>
+            <p class="lead bg-dark text-white">
+                <!--Making Paragraph Text stand out. adding dark background and white text.-->
+                Pets are great additions to a family. Morbi laoreet convallis libero, euismod rhoncus augue lacinia
+                vitae.
+                Fusce suscipit feugiat libero sed tristique. Etiam dapibus ultricies sem, eget laoreet nibh faucibus
+                eget.
+                Maecenas vel justo enim. Sed dapibus velit ac augue laoreet semper. Vivamus euismod purus commodo tellus
+                dignissim volutpat ut ut leo. Ut a lectus tincidunt, lobortis augue luctus, consectetur enim. Ut
+                fermentum
+                posuere rhoncus.
+            </p>
+        </div>
+    </section>
+    <!--Images below will stack on small screen, have margin on top and bottom. middle takes more of the container than the other two when all horizontal. -->
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-12 col-sm my-4">
+                <img src="https://cdn.stocksnap.io/img-thumbs/960w/goose-animal_WB3YDYHF0D.jpg"
+                    class="img-fluid rounded" alt="BabyGeese">
+            </div>
+
+            <div class="col-12 col-sm col-md-6 my-4">
+                <img src="https://cdn.stocksnap.io/img-thumbs/960w/animal-goat_JJ9ROXGWHQ.jpg"
+                    class="img-fluid rounded-pill" alt="Goat">
+            </div>
+            <div class="col-12 col-sm my-4">
+                <img src="https://www.stockvault.net/data/2011/01/01/116804/preview16.jpg"
+                    class="img-fluid rounded-circle" alt="SmilingPig">
+            </div>
+        </div>
     </div>
-    <div class="text-center mb-4"><h1>Adopt a Pet</h1></div>
-    
-    <div>
-        <h2>Why you should adopt a pet.</h2>
-    </div>
-    
-    <div>
-        <p>Pets are great additions to a family. Morbi laoreet convallis libero, euismod rhoncus augue lacinia vitae.
-            Fusce suscipit feugiat libero sed tristique. Etiam dapibus ultricies sem, eget laoreet nibh faucibus eget.
-            Maecenas vel justo enim. Sed dapibus velit ac augue laoreet semper. Vivamus euismod purus commodo tellus
-            dignissim volutpat ut ut leo. Ut a lectus tincidunt, lobortis augue luctus, consectetur enim. Ut fermentum
-            posuere rhoncus.</p>
-    </div>
-    <div>
-        <img src="pexels-pixabay-37833.jpg" class="img-fluid" alt="Birds">
-        <img src="pexels-lumn-406014.jpg" class="img-fluid" alt="Dog">
-    </div>
-    <div>
-        <ol>
-            <li>Nullam tincidunt turpis eu lorem imperdiet, ac rhoncus diam dignissim.</li>
-            <li>Aenean quis enim sit amet velit commodo porta.</li>
-            <li>Etiam mollis purus in orci tincidunt, id porttitor est bibendum.</li>
-            <li>Integer viverra risus vel ante tempus, quis vehicula odio consequat.</li>
-            <li>Donec facilisis nulla et urna dapibus tincidunt.</li>
-        </ol>
-    </div>
-    <div>
-        <footer class="text-center">
+
+
+    <section>
+        <div>
+            <!--Bootstrap List group which adds some lines between each list item and a border around the whole list-->
+            <ul class="list-group">
+                <li class="list-group-item">Nullam tincidunt turpis eu lorem imperdiet, ac rhoncus diam dignissimnim sit
+                    ametviverra risus vel ante tempus.Integer viverra risus vel ante tempus, quis vehicula odio
+                    consequat</li>
+                <li class="list-group-item">Aenean quis enim sit amet velit commodo porta.</li>
+                <li class="list-group-item">Etiam mollis purus in orci tincidunt, id porttitor est bibendum.</li>
+                <li class="list-group-item">Integer viverra risus vel ante tempus, quis vehicula odio consequat.</li>
+                <li class="list-group-item">Donec facilisis nulla et urna dapibus tincidunt.</li>
+            </ul>
+    </section>
+
+
+    <div> <!--Footer with top and bottom margin of 5. -->
+        <footer class="text-center my-5">
             JennyMarshall
         </footer>
     </div>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--This is needed for the nav dropdown to work.-->
+
+
 </body>
 
 </html>
